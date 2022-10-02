@@ -6,14 +6,14 @@ export const ContentWhithCustomHooks = () => {
     <>
       <h1>Counte Whith Hooks: {counter}</h1>
       <hr />
-      <button className="btn btn-primary" onClick={increment}>
+      <button className="btn btn-primary" onClick={() => increment(2)}>
         +1
       </button>
-      <button className="btn btn-danger" onClick={reset}>
+      <button className="btn btn-danger" onClick={() => reset()}>
         {" "}
         Reset
       </button>
-      <button className="btn btn-success" onClick={decrement}>
+      <button className="btn btn-success" onClick={() => decrement(3)}>
         {" "}
         -1
       </button>
