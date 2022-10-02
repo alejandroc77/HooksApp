@@ -7,9 +7,9 @@ import { SimpleForm } from "./02-useEfect/SimpleForm";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <>
     {/* <CounterApp />
     <ContentWhithCustomHooks /> */}
     <SimpleForm />
-  </React.StrictMode>
+  </>
 );

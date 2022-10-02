@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 export const SimpleForm = () => {
@@ -15,6 +16,19 @@ export const SimpleForm = () => {
       [name]: value, //propiedades computadas de los objetos !revisar mas a fondo https://www.javascripttutorial.net/es6/javascript-computed-property/
     });
   };
+
+  useEffect(() => {
+    console.log("use efec");
+  }, []);
+
+  useEffect(() => {
+    console.log("que mas");
+  }, [formState]);
+
+  useEffect(() => {
+    console.log("Email editado");
+  }, [email]);
+
   return (
     <>
       <h1>Simple Form</h1>
