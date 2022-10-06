@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { SimpleForm } from "./02-useEfect/SimpleForm";
+import { FormWithCustomHooks } from "./02-useEfect/FormWithCustomHooks";
+//import { SimpleForm } from "./02-useEfect/SimpleForm";
 // import { ContentWhithCustomHooks } from "./01-useState/ContentWhithCustomHooks";
 // import { CounterApp } from "./01-useState/CounterApp";
 // import { HooksApp } from "./HooksApp";
@@ -10,6 +11,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     {/* <CounterApp />
     <ContentWhithCustomHooks /> */}
-    <SimpleForm />
+    <FormWithCustomHooks />
   </>
 );

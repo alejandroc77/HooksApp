@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Message } from "./Message";
 
 export const SimpleForm = () => {
   const [formState, setFormState] = useState({
@@ -18,15 +18,15 @@ export const SimpleForm = () => {
   };
 
   useEffect(() => {
-    console.log("use efec");
+    // console.log("use efec");
   }, []);
 
   useEffect(() => {
-    console.log("que mas");
+    // console.log("Name editado");
   }, [formState]);
 
   useEffect(() => {
-    console.log("Email editado");
+    // console.log("Email editado");
   }, [email]);
 
   return (
@@ -49,6 +49,8 @@ export const SimpleForm = () => {
         value={email}
         onChange={onInputChange}
       />
+      {username === "jordy" && <Message />}
+      {/* //Otroo tipo de validacion en react */}
     </>
   );
 };
