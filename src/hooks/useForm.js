@@ -6,6 +6,11 @@ export const useForm = (initialForm = {}) => {
   //     email: "",
   //     password: "",
 
+  const onResetForm = () => {
+    //Funcion para resetear el formulario
+    setFormState(initialForm);
+  };
+
   const onInputChange = ({ target }) => {
     const { name, value } = target;
     setFormState({
@@ -16,5 +21,6 @@ export const useForm = (initialForm = {}) => {
   return {
     formState,
     onInputChange,
+    onResetForm,
   };
 };
