@@ -1,17 +1,14 @@
-import { useFecth } from "../hooks/useFecth";
+import { useCounter, useFecth } from "../hooks";
 
 export const MultipleCustomHooks = () => {
-  const { data, isLoading, hasError } = useFecth(
-    "https://www.breakingbadapi.com/api/quotes/3"
-  );
+  const { counter, increment } = useCounter();
 
-  const { author, quote, series } = !!data && data[0]; //En esta ocasion se aplica esta destructuracion porque me data un arreglo en vez de un objeto
+  const { data, isLoading, hasError } = useFecth(
+    `https://www.breakingbadapi.com/api/quotes/${counter}`
+  );
+  const { author, quote, series } = !!data && data[0]; //En esta ocasion se aplica esta destructuracion porque mi data  es un arreglo en vez de un objeto
 
   console.log({ data, isLoading, hasError });
-
-  //   if (isLoading) {
-  //     return <h1>Loading ...</h1>;
-  //   }
 
   return (
     <>
@@ -29,7 +26,13 @@ export const MultipleCustomHooks = () => {
         </blockquote>
       )}
 
-      <button className="btn btn-danger">Next quote</button>
+      <button
+        onClick={() => increment()}
+        className="btn btn-danger"
+        disabled={isLoading}
+      >
+        Next quote
+      </button>
     </>
   );
 };
