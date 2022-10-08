@@ -1,7 +1,7 @@
-import { useCounter, useFecth } from "../hooks";
+import { useCounter, useFecth } from "../hooks"; //se aplico el concepto de exportaciones de barril
 
 export const MultipleCustomHooks = () => {
-  const { counter, increment } = useCounter();
+  const { counter, increment } = useCounter(); //se uso este hooks antes creado para incrementar de forma dinamica el quote es decir el nombre de la ecena de la serie
 
   const { data, isLoading, hasError } = useFecth(
     `https://www.breakingbadapi.com/api/quotes/${counter}`
@@ -27,9 +27,9 @@ export const MultipleCustomHooks = () => {
       )}
 
       <button
-        onClick={() => increment()}
+        onClick={() => increment()} //onClick para incrementar
         className="btn btn-danger"
-        disabled={isLoading}
+        disabled={isLoading} //propiedad para que cuando cargue nueva informacion se desabilite el boton
       >
         Next quote
       </button>
