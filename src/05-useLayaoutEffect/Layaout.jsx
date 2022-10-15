@@ -5,6 +5,10 @@ export const Layaout = () => {
   const [randomNumber, setRandomNumber] = useState(1);
   const [effectLogs, setEffectLogs] = useState([]);
 
+  function resetear({ inicial = 0 }) {
+    setRandomNumber(inicial);
+  }
+
   useLayoutEffect(() => {
     setEffectLogs((preEvenEffect) => [...preEvenEffect, "efecto hecho"]);
   }, [randomNumber]);
@@ -18,6 +22,13 @@ export const Layaout = () => {
         }}
       >
         Generate random number!
+      </button>
+      <button
+        onClick={() => {
+          setRandomNumber(resetear);
+        }}
+      >
+        reset
       </button>
       <div>
         {effectLogs.map((effect, index) => (
