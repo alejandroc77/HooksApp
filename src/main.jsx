@@ -6,13 +6,14 @@ import ReactDOM from "react-dom/client";
 // import { ContentWhithCustomHooks } from "./01-useState/ContentWhithCustomHooks";
 // import { CounterApp } from "./01-useState/CounterApp";
 // import { HooksApp } from "./HooksApp";
-import { FocusScreen } from "./04-useRef/FocusScreen";
+//import { FocusScreen } from "./04-useRef/FocusScreen";
+import { Layaout } from "./05-useLayaoutEffect/Layaout";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     {/* <CounterApp />
     <ContentWhithCustomHooks /> */}
-    <FocusScreen />
+    <Layaout />
   </>
 );
